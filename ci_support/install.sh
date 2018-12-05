@@ -1,7 +1,9 @@
 # Install miniconda
 
 ARCH=`uname -m`
-echo "ARCH: $ARCH"
+echo "AMOL: ARCH: $ARCH"
+echo "AMOL: OS:"
+cat /etc/os-release
 if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
     wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-${ARCH}.sh -O miniconda.sh;
 else
