@@ -1,4 +1,5 @@
 # Install miniconda
+sudo apt-get update
 
 ARCH=`uname -m`
 echo "AMOL: ARCH: $ARCH"
@@ -9,6 +10,7 @@ if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
 else
     wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-${ARCH}.sh -O miniconda.sh;
 fi
+chmod 755 miniconda.sh 
 bash miniconda.sh -b -p $HOME/miniconda
 export PATH="$HOME/miniconda/bin:$PATH"
 echo 'PATH =' $PATH
