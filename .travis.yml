@@ -17,12 +17,8 @@ jobs:
       os: linux-ppc64le
 
       install:
-
-          - ./ci_support/install.sh
-
-          # Build conda package
-          - cd conda-recipes/zip-feedstock
-          - conda build .
+          # Install necessary packages and build recipe  
+          - ./ci_support/install.sh zip-feedstock
 
       script:
           # Upload built conda package to UNICAMP FTP

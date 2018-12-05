@@ -22,3 +22,7 @@ conda install conda-build
 
 # Install lftp
 sudo apt-get install lftp
+
+# Build conda package
+cd conda-recipes/$1
+conda build .
