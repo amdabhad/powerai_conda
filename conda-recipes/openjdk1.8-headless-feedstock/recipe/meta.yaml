@@ -1,18 +1,16 @@
 {% set java_version = "1.8.0" %}
 {% set sha256sum = "9cc038c95786cbbea46fce35534341412a3fd1c8ec3e208d7ec0374714ebdb01" %}
-{% set pkg_version = "1.8.0.161-2.b14.el7" %}
+{% set pkg_version = "1.8.0.181-7.b13.el7" %}
 
 
 package:
   name: java-{{ java_version }}-openjdk-headless-ppcl64le
-  version: {{ java_version }}.161
+  version: {{ java_version }}.181
 
 source:
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-{{ java_version }}-openjdk-headless-{{ pkg_version }}.ppc64le.rpm
     sha256: {{ sha256sum }}
     folder: binary
-  - url: http://vault.centos.org/7.5.1804/os/Source/SPackages/java-{{ java_version }}-openjdk-{{ pkg_version }}.src.rpm
-    folder: source
   - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/tzdata-java-2018c-1.el7.noarch.rpm
     folder: tzdata
 
