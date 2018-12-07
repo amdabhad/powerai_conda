@@ -13,7 +13,6 @@ jobs:
     # Zip Recipe
     - stage: zip
       language: generic
-
       os: linux-ppc64le
 
       install:
@@ -28,7 +27,6 @@ jobs:
 # openjdk1.8-headless Recipe
     - stage: openjdk1.8-headless
       language: generic
-
       os: linux-ppc64le
 
       install:
@@ -39,3 +37,4 @@ jobs:
           # Upload built conda package to UNICAMP FTP
           - ls $HOME/miniconda/conda-bld/linux-ppc64le/*.tar.bz2
  #         - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./ci_support/ftp_upload.sh # Upload build_artifacts to UNICAMP FTP
+ 
